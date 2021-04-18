@@ -1,2 +1,4 @@
-# mediapedia
-A repository to hold SEPM project submission.
+# MediaPedia <img align = "right" height = "100" src = "assets/logo.png">
+<br><br>
+
+Media
