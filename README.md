@@ -13,15 +13,18 @@ Utilizing modern NLP architectures and easy to use Python full stack development
 
 ## Exploring Dataset
 
-## Exploring Code
-
 ## Tutorial
 
 ## How to use (Code)
 
-## How to contribute
-
 ## Steps of development
+- [ ] Landing Page
+- [ ] Movie DataLoader
+- [ ] Book Dataloader
+- [ ] Movie Model
+- [ ] Book Model
+- [ ] Collaborative Filtering
+- [ ] Hosting Herouku
 
 ## Requirements
 
