@@ -18,7 +18,7 @@ Utilizing modern NLP architectures and easy to use Python full stack development
 ## How to use (Code)
 
 ## Steps of development
-- [ ] Landing Page
+- [x] Landing Page
 - [ ] Movie DataLoader
 - [ ] Book Dataloader
 - [ ] Movie Model
