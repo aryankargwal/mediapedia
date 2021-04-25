@@ -10,21 +10,15 @@ from security import (
     login_user,
 )
 
-with open("style.css") as f:
-    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
-
 # Sidebar Menu
-menu = ["Welcome", "OTT Recommendation", "Book Recommnedation"]
-st.sidebar.image("assets/logo1.png")
+st.sidebar.image("assets/logo.png")
 st.sidebar.markdown(
     "MediaPedia is our attempt to make an interactive and user friendly media recommender web application with added utilities and features."
 )
 st.sidebar.markdown("Check out the code at:")
 st.sidebar.markdown("[Github Repository](!https://github.com/aryankargwal/mediapedia)")
-option = st.sidebar.selectbox("Menu", menu)
-
 # Landing page
-if option == "Welcome":
+def landing():
     st.header("MediaPedia")
     st.image("assets/confused.jpg")
     st.subheader(
@@ -42,7 +36,7 @@ if option == "Welcome":
 
         username = st.text_input("User Name")
         password = st.text_input("Password", type="password")
-        if st.checkbox("Login"):
+        if st.button("Login"):
             # if password == '12345':
             create_usertable()
             hashed_pswd = make_hashes(password)
@@ -51,19 +45,6 @@ if option == "Welcome":
 
                 st.success("Logged In as {}".format(username))
 
-                task = st.selectbox("Task", ["Add Post", "Analytics", "Profiles"])
-                if task == "Add Post":
-                    st.subheader("Add Your Post")
-
-                elif task == "Analytics":
-                    st.subheader("Analytics")
-                elif task == "Profiles":
-                    st.subheader("User Profiles")
-                    user_result = view_all_users()
-                    clean_db = pd.DataFrame(
-                        user_result, columns=["Username", "Password"]
-                    )
-                    st.dataframe(clean_db)
             else:
                 st.warning("Incorrect Username/Password")
 
@@ -77,3 +58,7 @@ if option == "Welcome":
             add_userdata(new_user, make_hashes(new_password))
             st.success("You have successfully created a valid Account")
             st.info("Go to Login Menu to login")
+
+
+if __name__ == "__main__":
+    landing()
