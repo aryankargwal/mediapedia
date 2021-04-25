@@ -17,6 +17,8 @@ st.sidebar.markdown(
 )
 st.sidebar.markdown("Check out the code at:")
 st.sidebar.markdown("[Github Repository](!https://github.com/aryankargwal/mediapedia)")
+
+
 # Landing page
 def landing():
     st.header("MediaPedia")
