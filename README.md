@@ -24,7 +24,6 @@ Utilizing modern NLP architectures and easy to use Python full stack development
 - [x] Book Dataloader
 - [x] Movie Model
 - [ ] Book Model
-- [ ] Hosting Herouku
 
 ## Requirements
 
