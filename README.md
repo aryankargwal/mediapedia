@@ -24,13 +24,13 @@ Utilizing modern NLP architectures and easy to use Python full stack development
 
 ## How to use (Code)<br>
 Clone the repository<br>
-` git clone https://github.com/aryankargwal/mediapedia.git`<br>
+``` git clone https://github.com/aryankargwal/mediapedia.git```<br>
 
 Setting up the python requirements using [requirements.txt](requirements.txt)<br>
-` pip install -r requirements.txt`<br>
+``` pip install -r requirements.txt```<br>
 
 Running the web application<br>
-` streamlit run app.py`<br> 
+``` streamlit run app.py```<br> 
 
 
 ## Steps of development
