@@ -46,6 +46,7 @@ def landing():
             if result:
 
                 st.sidebar.success("Logged In as {}".format(username))
+                st.selectbox("Choose the Recommendation", ["Movie", "Book"])
 
             else:
                 st.sidebar.warning("Incorrect Username/Password")
