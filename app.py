@@ -28,38 +28,38 @@ def landing():
     )
     st.subheader("Let us start!")
     menu = ["Login", "SignUp"]
-    login = st.selectbox("Menu", menu)
+    login = st.sidebar.selectbox("Menu", menu)
 
     if login == "Home":
         st.subheader("Home")
 
     elif login == "Login":
-        st.subheader("Login Section")
+        st.sidebar.subheader("Login Section")
 
-        username = st.text_input("User Name")
-        password = st.text_input("Password", type="password")
-        if st.button("Login"):
+        username = st.sidebar.text_input("User Name")
+        password = st.sidebar.text_input("Password", type="password")
+        if st.sidebar.button("Login"):
             # if password == '12345':
             create_usertable()
             hashed_pswd = make_hashes(password)
             result = login_user(username, check_hashes(password, hashed_pswd))
             if result:
 
-                st.success("Logged In as {}".format(username))
+                st.sidebar.success("Logged In as {}".format(username))
 
             else:
-                st.warning("Incorrect Username/Password")
+                st.sidebar.warning("Incorrect Username/Password")
 
     elif login == "SignUp":
-        st.subheader("Create New Account")
-        new_user = st.text_input("Username")
-        new_password = st.text_input("Password", type="password")
+        st.sidebar.subheader("Create New Account")
+        new_user = st.sidebar.text_input("Username")
+        new_password = st.sidebar.text_input("Password", type="password")
 
-        if st.button("Signup"):
+        if st.sidebar.button("Signup"):
             create_usertable()
             add_userdata(new_user, make_hashes(new_password))
-            st.success("You have successfully created a valid Account")
-            st.info("Go to Login Menu to login")
+            st.sidebar.success("You have successfully created a valid Account")
+            st.sidebar.info("Go to Login Menu to login")
 
 
 if __name__ == "__main__":
