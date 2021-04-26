@@ -20,9 +20,9 @@ Utilizing modern NLP architectures and easy to use Python full stack development
 ## Steps of development
 - [x] Landing Page
 - [x] Login System with Database
-- [ ] Movie DataLoader
-- [ ] Book Dataloader
-- [ ] Movie Model
+- [x] Movie DataLoader
+- [x] Book Dataloader
+- [x] Movie Model
 - [ ] Book Model
 - [ ] Hosting Herouku
 
