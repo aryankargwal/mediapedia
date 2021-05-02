@@ -6,11 +6,12 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 import streamlit as st
+from googlesearch import search
 
 st.title("Movie Recommender")
 
 # Sidebar Menu
-st.sidebar.image("assets/logo.png")
+st.sidebar.image("../assets/logo.png")
 st.sidebar.markdown(
     "MediaPedia is our attempt to make an interactive and user friendly media recommender web application with added utilities and features."
 )
@@ -19,7 +20,7 @@ st.sidebar.markdown("[Github Repository](!https://github.com/aryankargwal/mediap
 
 
 # Data loading and feature engineering
-df = pd.read_csv("data/dataset.csv")
+df = pd.read_csv("../data/dataset.csv")
 features = ["keywords", "cast", "genres", "director"]
 
 
@@ -71,6 +72,9 @@ def movie():
     for element in sorted_similar_movies:
         if i < 5:
             st.write(get_title_from_index(element[0]))
+            query = get_title_from_index(element[0])
+            for j in search(query, tld="co.in", num=2, stop=2, pause=2):
+                st.write(j)
             i = i + 1
 
 
