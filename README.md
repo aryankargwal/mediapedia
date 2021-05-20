@@ -39,7 +39,6 @@ Running the web application<br>
 - [x] Movie DataLoader
 - [x] Book Dataloader
 - [x] Movie Model
-- [ ] Book Model
 
 ## License 
 This project is under the Apache License. See [LICENSE](LICENSE) for Details.
